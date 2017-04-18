@@ -5,7 +5,7 @@ const VideoListItem = ({video, onVideoSelect}) => {
     return(<li className = 'collection-item avatar' onClick={()=>{onVideoSelect(video)}}>
                 <div>
                     <img className='circle' src={imageURL} />
-                    <div  className = 'title"'>{video.snippet.title}</div>
+                    <div  className = 'title'>{video.snippet.title}</div>
                 </div>
             </li>
     )
