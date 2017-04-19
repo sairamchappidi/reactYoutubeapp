@@ -15,7 +15,7 @@ export default class App extends Component {
               };
     this.videoSearch('oneplus3');
   }
-  videoSearch(term){
+  videoSearch = (term) => {
     YTSearch({key:API_KEY,term:term},(videos)=>{
       console.log(videos)
       this.setState({videos:videos,

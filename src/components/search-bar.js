@@ -7,14 +7,14 @@ export default class SearchBar extends Component{
     this.searchInputTitle = null;
     this.handleInputChange = debounce(this.handleInputChange,500);
   }
-  handleInputChange(event){
+  handleInputChange = (event) => {
     
     this.setState({term:this.searchInputTitle.value});
     this.props.onChangeHandler(this.searchInputTitle.value);
   }
   render(){
     return (
-      <input className = 'search-bar' onChange={this.handleInputChange.bind(this)} ref={(el) => {this.searchInputTitle = el;}}/>
+      <input className = 'search-bar' placeholder = 'Search...' onChange={this.handleInputChange} ref={(el) => {this.searchInputTitle = el;}}/>
     )
   }
 }
